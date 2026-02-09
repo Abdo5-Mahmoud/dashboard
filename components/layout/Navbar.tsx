@@ -11,10 +11,34 @@ const Navbar = () => {
     setDark(!dark);
   };
   return (
-    <nav className="h-16 border-b px-6 flex items-center bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-800 dark:text-gray-100">
-      <h1 className="text-lg font-bold hover:text-indigo-600 transition-colors">
-        <Link href="/">Admin Panel</Link>
-      </h1>
+    <nav
+      className="
+  h-16
+  flex items-center
+  border-b
+  bg-gray-50 dark:bg-gray-900
+  border-gray-200 dark:border-gray-800
+  px-4 sm:px-6
+  text-gray-900 dark:text-gray-100
+"
+    >
+      {/* Left side */}
+      <div className="flex items-center gap-3">
+        <h1 className="text-lg font-bold">
+          <Link
+            href="/"
+            className="
+          transition-colors
+          hover:text-indigo-600
+          dark:hover:text-indigo-400
+          ml-3
+        "
+          >
+            Admin Panel
+          </Link>
+        </h1>
+      </div>
+
       {/* Right side */}
       <div className="ml-auto flex items-center gap-4">
         <span className="text-sm text-gray-600 dark:text-gray-400">Abdo</span>

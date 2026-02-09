@@ -1,4 +1,4 @@
-# Admin Dashboard - Day 1 Notes
+<!-- # Admin Dashboard - Day 1 Notes
 
 ## Architecture Overview
 
@@ -165,4 +165,48 @@ to know
       - fetchTypes.ts
       - ProductType.ts
       - propsType.ts
-    - utils
+    - utils -->
+
+
+#### 6/2/2026
+### Folder Structure
+- dashboard
+  - products
+    - new
+    - [id]     <!-- Product id to edit it -->
+  - categoris
+    - [slug]
+  - componets  
+    - ui
+      - Button : it takes the "text" and navigate to as "text"
+      - form accepts what required to appear and it's id "text"
+    - products 
+      - products list
+      - productRow
+  - hooks
+   - useProductForm.ts
+  - services 
+    - prodcut.service.ts
+
+
+#### 8/2/2026
+## Folder structure update
+
+- dashboard
+  - products
+    - new
+    - [id]     <!-- Product id to edit it -->
+  - categories
+    - [category]
+    - page.tsx    <!-- has the categories list and the form to add new one -->
+  - componets  
+    - ui
+      - Button : it takes the "text" and navigate to as "text"
+      - form accepts what required to appear and it's id "text"
+    - products 
+      - products list
+      - productRow
+  - hooks
+   - useProductForm.ts
+  - services 
+    - prodcut.service.ts

@@ -1,4 +1,5 @@
-import { ProductCardProps } from "@/types/propsType";
+import { ProductCardProps } from "@/types/props.type";
+import Image from "next/image";
 
 function ProductCard({ product, children }: ProductCardProps) {
   return (
@@ -10,6 +11,16 @@ function ProductCard({ product, children }: ProductCardProps) {
         flex flex-col gap-2
       "
     >
+      <div className="relative w-[200px] h-[120px] flex items-center justify-center bg-white rounded-lg">
+        <Image
+          src={product.image}
+          alt={product.title}
+          fill
+          sizes="200px"
+          objectFit="cover"
+          className="rounded-lg hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:rotate-1"
+        />
+      </div>
       <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
         {product.title}
       </h3>

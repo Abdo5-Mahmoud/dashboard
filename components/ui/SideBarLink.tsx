@@ -1,6 +1,6 @@
 "use client";
 
-import { SideBarLinkProps } from "@/types/propsType";
+import { SideBarLinkProps } from "@/types/props.type";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

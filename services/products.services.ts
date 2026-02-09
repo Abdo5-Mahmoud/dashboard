@@ -1,4 +1,4 @@
-import { FetchProductServiceResponse } from "@/types/fetchTypes";
+import { products } from "@/lib/mock/products";
 
 export async function fetchProducts({
   page,
@@ -6,17 +6,18 @@ export async function fetchProducts({
 }: {
   page: string | number;
   limit: number;
-}): Promise<FetchProductServiceResponse> {
-  const data: FetchProductServiceResponse = await fetch(
-    "https://dummyjson.com/products",
-    {
-      cache: "force-cache",
-    },
-  ).then((res) => res.json());
-  const products = data.products;
+}) {
+  // const data: FetchProductServiceResponse = await fetch(
+  //   "https://dummyjson.com/products",
+  //   {
+  //     cache: "force-cache",
+  //   },
+  // ).then((res) => res.json());
   const startIndex = (parseInt(page.toString()) - 1) * limit;
   const endIndex = startIndex + limit;
-  data.products = products.slice(startIndex, endIndex);
 
-  return { products: data.products, total: products.length };
+  return {
+    products: products.slice(startIndex, endIndex),
+    total: products.length,
+  };
 }

@@ -11,7 +11,7 @@ export default function DashboardPage() {
 
         <p className="text-gray-600">Manage products, orders and customers</p>
 
-        <Link href="/dashboard">
+        <Link href="/dashboard/products">
           <Button>Go to Dashboard</Button>
         </Link>
       </div>
