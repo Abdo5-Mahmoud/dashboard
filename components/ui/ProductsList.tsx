@@ -1,8 +1,7 @@
 import { ProductType } from "@/types/Product.types";
 import { ProductsListProps } from "@/types/props.type";
-import { Button } from "./Button";
-import ProductCard from "./ProductCard";
 import Link from "next/link";
+import ProductCard from "./ProductCard";
 
 const ProductsList = ({ products }: ProductsListProps) => {
   return (
@@ -11,8 +10,8 @@ const ProductsList = ({ products }: ProductsListProps) => {
         <ProductCard key={prod.id} product={prod}>
           <Link
             className="
-      rounded-md bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700"
-            href={`products/${prod.id}`}
+      rounded-md bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700 text-center"
+            href={`/dashboard/products/${prod.id}`}
           >
             Update Product
           </Link>

@@ -9,7 +9,9 @@ export type SideBarLinkProps = {
   link: {
     name: string;
     href: string;
+    children?: { name: string; href: string }[];
   };
+  isChild?: boolean;
 };
 
 export type PaginationProps = { total: number };
@@ -24,7 +26,11 @@ export type ProductsListProps = {
 };
 
 export type SidebarProps = {
-  links: { name: string; href: string }[];
+  links: {
+    name: string;
+    href: string;
+    children?: { name: string; href: string }[];
+  }[];
 };
 
 export type ProductsPageProps = {

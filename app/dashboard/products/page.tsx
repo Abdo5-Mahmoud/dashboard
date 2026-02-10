@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/Button";
 import Pagination from "@/components/Pagination";
 import ProductsList from "@/components/ui/ProductsList";
 import { fetchProducts } from "@/services/products.services";
 import { ProductsPageProps } from "@/types/props.type";
-import Link from "next/link";
 
 const ProductsPage = async ({ searchParams }: ProductsPageProps) => {
   const allSearchParams = await searchParams;
@@ -26,9 +24,6 @@ const ProductsPage = async ({ searchParams }: ProductsPageProps) => {
             {total}
           </span>
         </h1>
-        <Button>
-          <Link href="/dashboard/newproduct">Add New Product</Link>
-        </Button>
       </div>
       <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4 sm:p-6 ">
         <Pagination total={total} />
